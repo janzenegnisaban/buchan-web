@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manage Jobs | BGSC Admin</title>
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <a class="admin-brand" href="dashboard.html">
+        <img src="../assets/img/logo.png" alt="" />
+        <span>BGSC Admin<small>Management</small></span>
+      </a>
+      <nav class="admin-nav" id="admin-sidebar-nav"></nav>
+    </aside>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button type="button" class="admin-mobile-toggle" id="admin-nav-toggle">Menu</button>
+          <h1>Jobs</h1>
+        </div>
+        <div class="hero-actions">
+          <button type="button" class="btn btn-primary btn-sm" id="btn-new-job">New job</button>
+          <button type="button" class="btn btn-outline btn-sm" id="admin-logout">Sign out</button>
+        </div>
+      </div>
+      <div class="admin-content">
+        <div id="jobs-root"></div>
+        <div id="job-modal" class="modal-backdrop hidden">
+          <div class="modal" style="max-width:640px;">
+            <div class="modal-header">
+              <h3 id="modal-title">New job</h3>
+              <button type="button" class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+            </div>
+            <form id="job-form">
+              <input type="hidden" name="job_id" id="job_id" />
+              <div class="form-group">
+                <label class="form-label" for="title">Title *</label>
+                <input class="form-control" name="title" id="title" required />
+              </div>
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="category">Category</label>
+                  <input class="form-control" name="category" id="category" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="employment_type">Employment type</label>
+                  <input class="form-control" name="employment_type" id="employment_type" value="Contractual" />
+                </div>
+              </div>
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="location">Location</label>
+                  <input class="form-control" name="location" id="location" />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="salary_range">Salary range</label>
+                  <input class="form-control" name="salary_range" id="salary_range" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" name="description" id="description"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="qualifications">Qualifications (one per line)</label>
+                <textarea class="form-control" name="qualifications" id="qualifications"></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="requirements">Requirements (one per line)</label>
+                <textarea class="form-control" name="requirements" id="requirements"></textarea>
+              </div>
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="status">Status</label>
+                  <select class="form-control" name="status" id="status">
+                    <option value="open">Open</option>
+                    <option value="closed">Closed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label"><input type="checkbox" name="urgent" id="urgent" /> Urgent hiring</label>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-ghost" id="modal-cancel">Cancel</button>
+                <button type="submit" class="btn btn-primary">Save</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/pages/admin-jobs.js"></script>
+</body>
+</html>

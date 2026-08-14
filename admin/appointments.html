@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Appointments | BGSC Admin</title>
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <a class="admin-brand" href="dashboard.html">
+        <img src="../assets/img/logo.png" alt="" />
+        <span>BGSC Admin<small>Management</small></span>
+      </a>
+      <nav class="admin-nav" id="admin-sidebar-nav"></nav>
+    </aside>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button type="button" class="admin-mobile-toggle" id="admin-nav-toggle">Menu</button>
+          <h1>Appointments</h1>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="admin-logout">Sign out</button>
+      </div>
+      <div class="admin-content" id="appts-root">
+        <div class="loading-block"><div class="spinner"></div></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/pages/admin-appointments.js"></script>
+</body>
+</html>

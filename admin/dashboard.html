@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard | BGSC</title>
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <a class="admin-brand" href="dashboard.html">
+        <img src="../assets/img/logo.png" alt="" />
+        <span>BGSC Admin<small>Management</small></span>
+      </a>
+      <nav class="admin-nav" id="admin-sidebar-nav"></nav>
+      <div class="admin-sidebar-footer">Hidden entry via footer · Enforce with Supabase RLS later</div>
+    </aside>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button type="button" class="admin-mobile-toggle" id="admin-nav-toggle">Menu</button>
+          <h1>Dashboard</h1>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="admin-logout">Sign out</button>
+      </div>
+      <div class="admin-content">
+        <div class="stat-grid" id="stats"></div>
+        <div class="admin-panel mt-6">
+          <h2>Quick actions</h2>
+          <div class="admin-actions">
+            <a class="btn btn-primary" href="applicants.html">Review applicants</a>
+            <a class="btn btn-secondary" href="jobs.html">Manage jobs</a>
+            <a class="btn btn-outline" href="slots.html">Interview slots</a>
+            <a class="btn btn-outline" href="appointments.html">Appointments</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/pages/admin-dashboard.js"></script>
+</body>
+</html>

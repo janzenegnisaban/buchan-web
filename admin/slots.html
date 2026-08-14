@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Interview Slots | BGSC Admin</title>
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <a class="admin-brand" href="dashboard.html">
+        <img src="../assets/img/logo.png" alt="" />
+        <span>BGSC Admin<small>Management</small></span>
+      </a>
+      <nav class="admin-nav" id="admin-sidebar-nav"></nav>
+    </aside>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button type="button" class="admin-mobile-toggle" id="admin-nav-toggle">Menu</button>
+          <h1>Interview slots</h1>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="admin-logout">Sign out</button>
+      </div>
+      <div class="admin-content">
+        <div class="content-grid content-grid-2">
+          <div class="admin-panel">
+            <h2>Add single slot</h2>
+            <form id="slot-form">
+              <div class="form-group">
+                <label class="form-label" for="date">Date</label>
+                <input class="form-control" type="date" id="date" name="date" required />
+              </div>
+              <div class="form-row form-row-2">
+                <div class="form-group">
+                  <label class="form-label" for="start">Start</label>
+                  <input class="form-control" type="time" id="start" name="start" value="09:00" required />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="end">End</label>
+                  <input class="form-control" type="time" id="end" name="end" value="10:00" required />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="capacity">Capacity</label>
+                <input class="form-control" type="number" id="capacity" name="capacity" min="1" value="3" required />
+              </div>
+              <button type="submit" class="btn btn-primary">Publish slot</button>
+            </form>
+          </div>
+          <div class="admin-panel">
+            <h2>Bulk generate weekdays</h2>
+            <form id="bulk-form">
+              <div class="form-group">
+                <label class="form-label" for="bulk_start">Week starting</label>
+                <input class="form-control" type="date" id="bulk_start" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="bulk_cap">Capacity per slot</label>
+                <input class="form-control" type="number" id="bulk_cap" min="1" value="3" />
+              </div>
+              <p class="form-hint">Creates Mon–Fri slots at 9, 10, 11, 13, 14, 15 for 5 weekdays.</p>
+              <button type="submit" class="btn btn-secondary">Generate week</button>
+            </form>
+          </div>
+        </div>
+        <div class="admin-panel">
+          <h2>All slots</h2>
+          <div id="slots-table"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/pages/admin-slots.js"></script>
+</body>
+</html>

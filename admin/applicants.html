@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Applicants | BGSC Admin</title>
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body class="admin-body">
+  <div class="admin-shell">
+    <aside class="admin-sidebar" id="admin-sidebar">
+      <a class="admin-brand" href="dashboard.html">
+        <img src="../assets/img/logo.png" alt="" />
+        <span>BGSC Admin<small>Management</small></span>
+      </a>
+      <nav class="admin-nav" id="admin-sidebar-nav"></nav>
+    </aside>
+    <div class="admin-main">
+      <div class="admin-topbar">
+        <div>
+          <button type="button" class="admin-mobile-toggle" id="admin-nav-toggle">Menu</button>
+          <h1>Applicants</h1>
+        </div>
+        <button type="button" class="btn btn-outline btn-sm" id="admin-logout">Sign out</button>
+      </div>
+      <div class="admin-content">
+        <div class="filters">
+          <div class="form-group" style="flex:2;">
+            <label class="form-label" for="q">Search</label>
+            <input class="form-control" id="q" placeholder="Name, email, job…" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="status">Status</label>
+            <select class="form-control" id="status">
+              <option value="">All</option>
+              <option value="submitted">Submitted</option>
+              <option value="under_review">Under Review</option>
+              <option value="qualified">Qualified</option>
+              <option value="not_qualified">Not Qualified</option>
+              <option value="interview_scheduled">Interview Scheduled</option>
+              <option value="interviewed">Interviewed</option>
+              <option value="hired">Hired</option>
+              <option value="talent_pool">Talent Pool</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="job_id">Job</label>
+            <select class="form-control" id="job_id"><option value="">All jobs</option></select>
+          </div>
+          <button type="button" class="btn btn-primary" id="btn-filter">Filter</button>
+        </div>
+        <div id="table-root"></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="../assets/js/pages/admin-applicants.js"></script>
+</body>
+</html>

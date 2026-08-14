@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Sign in | BGSC</title>
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+  <link rel="stylesheet" href="../assets/css/admin.css" />
+</head>
+<body class="admin-body">
+  <main class="auth-page">
+    <div class="auth-card">
+      <div class="text-center mb-4">
+        <img src="../assets/img/logo.png" alt="" width="56" height="56" style="margin:0 auto;" />
+      </div>
+      <h1>Admin</h1>
+      <p class="auth-sub">Buchan Global Services — management access</p>
+      <div id="alert" class="alert alert-error hidden"></div>
+      <form id="admin-login-form">
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-control" type="password" id="password" name="password" required />
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      <p class="form-hint text-center mt-4">Prototype login: admin@buchanglobal.local / admin123</p>
+      <div class="auth-footer"><a href="../index.html">← Back to site</a></div>
+    </div>
+  </main>
+  <script type="module" src="../assets/js/pages/admin-login.js"></script>
+</body>
+</html>
