@@ -142,15 +142,15 @@ function paintHeader(el, p, active, user) {
       <button class="nav-toggle" id="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
         <span></span><span></span><span></span>
       </button>
-      <nav class="site-nav" id="site-nav" aria-hidden="true">
-        <a href="${p}index.html" class="${active === "home" ? "is-active" : ""}">Home</a>
-        <a href="${p}about.html" class="${active === "about" ? "is-active" : ""}">About</a>
-        <a href="${p}services.html" class="${active === "services" ? "is-active" : ""}">Services</a>
-        <a href="${p}jobs.html" class="${active === "jobs" ? "is-active" : ""}">Jobs</a>
-        <a href="${p}contact.html" class="${active === "contact" ? "is-active" : ""}">Contact</a>
-        ${authLinks}
-      </nav>
     </div>
+    <nav class="site-nav" id="site-nav" aria-hidden="true">
+      <a href="${p}index.html" class="${active === "home" ? "is-active" : ""}">Home</a>
+      <a href="${p}about.html" class="${active === "about" ? "is-active" : ""}">About</a>
+      <a href="${p}services.html" class="${active === "services" ? "is-active" : ""}">Services</a>
+      <a href="${p}jobs.html" class="${active === "jobs" ? "is-active" : ""}">Jobs</a>
+      <a href="${p}contact.html" class="${active === "contact" ? "is-active" : ""}">Contact</a>
+      ${authLinks}
+    </nav>
     <div class="nav-scrim" id="nav-scrim" hidden></div>
   `;
   bindMobileNav();
