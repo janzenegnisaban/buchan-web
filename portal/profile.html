@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Profile | Buchan Global Services</title>
+  <link rel="icon" href="../assets/img/logo.png" />
+  <link rel="stylesheet" href="../assets/css/tokens.css" />
+  <link rel="stylesheet" href="../assets/css/base.css" />
+  <link rel="stylesheet" href="../assets/css/components.css" />
+  <link rel="stylesheet" href="../assets/css/layout.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <div class="portal-layout">
+    <aside class="portal-sidebar" id="portal-sidebar"></aside>
+    <div class="portal-content">
+      <div class="portal-header">
+        <div>
+          <h1>My Profile</h1>
+          <p class="text-muted mb-0">Keep your details up to date for faster processing.</p>
+        </div>
+      </div>
+      <div class="card" style="max-width:720px;">
+        <form id="profile-form">
+          <div class="form-row form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="full_name">Full name</label>
+              <input class="form-control" id="full_name" name="full_name" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">Mobile</label>
+              <input class="form-control" id="phone" name="phone" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-control" id="email" disabled />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="address">Address</label>
+            <textarea class="form-control" id="address" name="address"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="education">Education</label>
+            <textarea class="form-control" id="education" name="education" placeholder="School, course, year graduated…"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="experience">Work experience</label>
+            <textarea class="form-control" id="experience" name="experience" placeholder="Company, role, years…"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="skills">Skills</label>
+            <input class="form-control" id="skills" name="skills" placeholder="e.g. sewing, forklift, machine operation" />
+          </div>
+          <button type="submit" class="btn btn-primary">Save profile</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script type="module" src="../assets/js/pages/portal-profile.js"></script>
+</body>
+</html>
