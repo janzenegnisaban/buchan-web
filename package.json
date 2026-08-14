@@ -1,0 +1,16 @@
+{
+  "name": "buchan-recruitment-prototype",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Buchan Global Services Corporation recruitment website (HTML/CSS/JS + Supabase)",
+  "scripts": {
+    "start": "npx --yes serve . -l 5173",
+    "test:e2e": "node scripts/e2e-smoke.mjs"
+  },
+  "devDependencies": {
+    "playwright": "1.49.0"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.1"
+  }
+}

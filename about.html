@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Us | Buchan Global Services Corporation</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main>
+    <section class="page-hero has-photo" style="--hero-photo: url('/assets/img/hero/team.jpg')">
+      <div class="container reveal is-in">
+        <div class="eyebrow">Our story</div>
+        <h1>About Us</h1>
+        <p>BGSC was established in April 2010 — a 100% Filipino-owned Manpower Services Company.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container split-story">
+        <div class="reveal">
+          <img src="assets/img/jobs/safety.jpg" alt="Industrial and process plant work environments" />
+        </div>
+        <div class="reveal">
+          <h2>The Company</h2>
+          <p><strong>BUCHAN GLOBAL SERVICES CO.</strong> is a newly established, 100% Filipino-owned Manpower Services Company. The Company’s key personnel specialization and experiences has been in the field of Administrative Management, Quality Assurance particularly in the implementation of Quality Management System or the ISO 9001, Health and Safety Management, construction of Electrical, Instrumentation, Piping and Mechanical works for the Industrial, Oil &amp; Gas Plants and other Process Industries in the Philippines and International.</p>
+          <p>Our associates are distinguished by their functional and technical expertise combined with their hands-on experience, thereby ensuring that our clients receive the most effective and professional services.</p>
+          <h3 class="mt-8">Our Core Values</h3>
+          <ul class="values-list">
+            <li>Loyalty</li>
+            <li>Dependability</li>
+            <li>Commitment</li>
+            <li>Integrity</li>
+            <li>Public Service</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="vm-grid">
+          <div class="vm-card reveal">
+            <h3>Our Vision</h3>
+            <p>To exceed the expectations of every client by offering outstanding customer service, increased flexibility, reliability and greater value in consideration of timely execution, good quality and effective budget.</p>
+            <p>To acquire a reputation as the most dependable in this industry. To be one of the major players in the local manpower servicing industry and Human Resources consultancy trade, capable of acquiring competent jobseekers that will provide quality services for the utmost satisfaction of our valued customer.</p>
+            <p class="mb-0">To gain 100% client’s and employees’ satisfaction and keeping their trust with the Company thru continuous improvements on our services.</p>
+          </div>
+          <div class="vm-card reveal reveal-delay-1">
+            <h3>Our Mission</h3>
+            <p>BUCHAN GLOBAL SERVICES CO. mission is to uplift the morale of the agency workers through the following:</p>
+            <ul>
+              <li>Help people find a suitable and quality job by conducting a productive search of job openings with a reasonable compensation package as mandated by Law.</li>
+              <li>Render quality and reliable services to all clients, with reasonable rates.</li>
+              <li>Provide our employees an opportunity for career growth and development.</li>
+              <li>Develop and practice loyalty, integrity, trustworthiness and service-oriented individuals.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>At a glance</h2>
+        </div>
+        <div class="stats-band" style="margin-top:0;">
+          <div class="stat-pill reveal"><div class="num">2010</div><div class="lbl">Established</div></div>
+          <div class="stat-pill reveal reveal-delay-1"><div class="num">100%</div><div class="lbl">Filipino-owned</div></div>
+          <div class="stat-pill reveal reveal-delay-2"><div class="num">2</div><div class="lbl">Branches · Subic &amp; Clark</div></div>
+          <div class="stat-pill reveal reveal-delay-3"><div class="num">SBMA+</div><div class="lbl">Zambales · Bataan · Clark</div></div>
+        </div>
+        <p class="text-muted text-center mt-6 reveal">Actively hiring across SBMA / Zambales / Bataan / Clark Freeport Zone — see current openings on our <a href="jobs.html">Jobs</a> page or Facebook hiring posts.</p>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script type="module">
+    import { renderHeader, renderFooter } from "./assets/js/ui.js";
+    await renderHeader("about");
+    renderFooter();
+  </script>
+</body>
+</html>

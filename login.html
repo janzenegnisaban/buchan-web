@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in | Buchan Global Services</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="auth-page auth-split">
+    <div class="auth-visual">
+      <img src="assets/img/hero/factory.jpg" alt="Workforce on the production floor" />
+      <div class="overlay">
+        <h2>Your next job starts here</h2>
+        <p class="mb-0">Apply, upload documents, and book your interview — all in one portal.</p>
+      </div>
+    </div>
+    <div class="auth-card">
+      <h1>Sign in</h1>
+      <p class="auth-sub">Access your applicant portal to apply, upload documents, and book appointments.</p>
+      <div id="login-alert" class="alert alert-error hidden"></div>
+      <form id="login-form" method="post" action="#" autocomplete="on">
+        <div class="form-group">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-control" type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-control" type="password" id="password" name="password" autocomplete="current-password" required />
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+      <div class="auth-footer">
+        No account yet? <a href="register.html">Register</a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script>
+    if (location.protocol === "file:") {
+      document.body.insertAdjacentHTML(
+        "afterbegin",
+        '<div class="alert alert-error" style="margin:0;border-radius:0;text-align:center;padding:1rem;">' +
+          "<strong>Do not open this file directly.</strong> Run <code>npm start</code> then open " +
+          '<a href="http://localhost:5173/login.html">http://localhost:5173/login.html</a>.' +
+          "</div>"
+      );
+    }
+  </script>
+  <script type="module" src="assets/js/pages/login.js"></script>
+</body>
+</html>

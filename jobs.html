@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Job Openings | Buchan Global Services Corporation</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main>
+    <section class="page-hero has-photo" style="--hero-photo: url('/assets/img/jobs/production.jpg')">
+      <div class="container reveal is-in">
+        <div class="eyebrow">Now hiring</div>
+        <h1>Job Openings</h1>
+        <p>Browse current hiring needs. Apply online and upload your resume and IDs — no paper forms required.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container">
+        <div class="filters" id="job-filters">
+          <div class="form-group" style="flex:2;">
+            <label class="form-label" for="q">Search</label>
+            <input class="form-control" id="q" name="q" placeholder="Title, keyword…" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="category">Category</label>
+            <select class="form-control" id="category">
+              <option value="">All</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="employment_type">Type</label>
+            <select class="form-control" id="employment_type">
+              <option value="">All</option>
+              <option>Contractual</option>
+              <option>Project-based</option>
+              <option>Full-time</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="location">Location</label>
+            <input class="form-control" id="location" placeholder="City / area" />
+          </div>
+          <button type="button" class="btn btn-primary" id="btn-filter">Filter</button>
+        </div>
+        <div id="jobs-list" class="job-grid">
+          <div class="loading-block"><div class="spinner"></div><p>Loading openings…</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script src="assets/js/public-jobs-bootstrap.js"></script>
+  <script type="module">
+    import { renderHeader, renderFooter } from "./assets/js/ui.js";
+    renderHeader("jobs").catch(() => {});
+    renderFooter();
+    const reload = () => window.__bgscReloadJobs && window.__bgscReloadJobs();
+    document.getElementById("btn-filter")?.addEventListener("click", reload);
+    ["q", "category", "employment_type", "location"].forEach((id) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      el.addEventListener("input", () => {
+        clearTimeout(window.__jobFilterT);
+        window.__jobFilterT = setTimeout(reload, 200);
+      });
+      el.addEventListener("change", reload);
+    });
+  </script>
+</body>
+</html>

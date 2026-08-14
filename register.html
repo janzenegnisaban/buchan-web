@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register | Buchan Global Services</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main class="auth-page auth-split">
+    <div class="auth-visual">
+      <img src="assets/img/hero/apply.jpg" alt="Applicants getting started together" />
+      <div class="overlay">
+        <h2>Less paperwork. Faster hiring.</h2>
+        <p class="mb-0">Create your free applicant account and apply to open roles today.</p>
+      </div>
+    </div>
+    <div class="auth-card">
+      <h1>Create account</h1>
+      <p class="auth-sub">Register as a job applicant to apply online and manage your documents.</p>
+      <div id="reg-alert" class="alert alert-error hidden"></div>
+      <form id="register-form" method="post" action="#" autocomplete="on">
+        <div class="form-group">
+          <label class="form-label" for="full_name">Full name <span class="required">*</span></label>
+          <input class="form-control" id="full_name" name="full_name" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email <span class="required">*</span></label>
+          <input class="form-control" type="email" id="email" name="email" autocomplete="email" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="phone">Mobile number</label>
+          <input class="form-control" id="phone" name="phone" placeholder="09XXXXXXXXX" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password <span class="required">*</span></label>
+          <input class="form-control" type="password" id="password" name="password" minlength="6" autocomplete="new-password" required />
+          <p class="form-hint">At least 6 characters</p>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Register</button>
+      </form>
+      <div class="auth-footer">
+        Already registered? <a href="login.html">Sign in</a>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script>
+    if (location.protocol === "file:") {
+      document.body.insertAdjacentHTML(
+        "afterbegin",
+        '<div class="alert alert-error" style="margin:0;border-radius:0;text-align:center;padding:1rem;">' +
+          "<strong>Do not open this file directly.</strong> Run <code>npm start</code> then open " +
+          '<a href="http://localhost:5173/register.html">http://localhost:5173/register.html</a>.' +
+          "</div>"
+      );
+    }
+  </script>
+  <script type="module" src="assets/js/pages/register.js"></script>
+</body>
+</html>

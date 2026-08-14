@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact | Buchan Global Services Corporation</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main>
+    <section class="page-hero has-photo" style="--hero-photo: url('/assets/img/hero/office.jpg')">
+      <div class="container reveal is-in">
+        <div class="eyebrow">We’re hiring · SBMA · Clark</div>
+        <h1>Contact Us</h1>
+        <p>Visit our Subic or Clark branch, call, or email — we’re ready to help applicants and clients.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our branches</h2>
+          <p>Buchan Global Services Corp. recruits for SBMA / Zambales / Bataan / Clark.</p>
+        </div>
+        <div class="content-grid content-grid-2">
+          <div class="card">
+            <h3>Subic Branch</h3>
+            <ul class="contact-list">
+              <li>
+                <div>
+                  <strong>Address</strong>
+                  RM. 208, 2/F Sancheon Corp. Bldg., Greenwoods Park, Central Business District, Subic Bay Freeport Zone
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:0476031583">047-603-1583</a> · <a href="tel:0472229095">047-222-9095</a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:buchan_recruitment@yahoo.com">buchan_recruitment@yahoo.com</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Clark Branch</h3>
+            <ul class="contact-list">
+              <li>
+                <div>
+                  <strong>Address</strong>
+                  Office Center 05-F2, Jose Abad Santos Ave., Clark Freeport Zone, Pampanga
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Phone</strong>
+                  <a href="tel:0455993928">(045)-599-3928</a> · <a href="tel:09277734249">0927-773-4249</a>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:buchanglobal.clark@gmail.com">buchanglobal.clark@gmail.com</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="content-grid content-grid-2 mt-8">
+          <div class="card" style="padding:0;overflow:hidden;min-height:240px;">
+            <iframe
+              title="Subic branch map"
+              width="100%"
+              height="260"
+              style="border:0;display:block;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://maps.google.com/maps?q=Greenwoods%20Park%20Subic%20Bay%20Freeport%20Zone&t=&z=14&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+          <div class="card reveal">
+            <h3>Send an inquiry</h3>
+            <p class="text-muted">For general questions. Job applications should go through the Jobs page.</p>
+            <form id="inquiry-form">
+              <div class="form-group">
+                <label class="form-label" for="name">Full name <span class="required">*</span></label>
+                <input class="form-control" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="email">Email <span class="required">*</span></label>
+                <input class="form-control" type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="message">Message <span class="required">*</span></label>
+                <textarea class="form-control" id="message" name="message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Send message</button>
+              <p class="form-hint mt-2">Prototype: inquiry is shown as sent locally. Wire to Supabase or email later.</p>
+            </form>
+            <div id="inquiry-success" class="alert alert-success hidden mt-4">Thank you! Your inquiry has been recorded.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script type="module">
+    import { renderHeader, renderFooter, toast } from "./assets/js/ui.js";
+    import { validateForm, email as emailRule, required } from "./assets/js/validate.js";
+    await renderHeader("contact");
+    renderFooter();
+
+    document.getElementById("inquiry-form").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const { ok } = validateForm(e.target, {
+        name: (v) => required(v, "Full name"),
+        email: emailRule,
+        message: (v) => required(v, "Message"),
+      });
+      if (!ok) return;
+      e.target.reset();
+      document.getElementById("inquiry-success").classList.remove("hidden");
+      toast("Inquiry sent (prototype)", "success");
+    });
+  </script>
+</body>
+</html>

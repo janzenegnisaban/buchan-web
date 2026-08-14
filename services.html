@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Services | Buchan Global Services Corporation</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link rel="stylesheet" href="assets/css/tokens.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/components.css" />
+  <link rel="stylesheet" href="assets/css/layout.css" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+</head>
+<body>
+  <header class="site-header" id="site-header"></header>
+  <main>
+    <section class="page-hero has-photo" style="--hero-photo: url('/assets/img/jobs/electrical.jpg')">
+      <div class="container reveal is-in">
+        <div class="eyebrow">What we do</div>
+        <h1>Our Services</h1>
+        <p>Manpower deployment and human resources support backed by technical and administrative expertise.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>What we provide</h2>
+          <p>From production floors to specialized industrial works, we supply competent and reliable personnel.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature-media-card reveal">
+            <img src="assets/img/jobs/production.jpg" alt="Manpower supply on site" />
+            <div class="pad">
+              <h3>Manpower Supply</h3>
+              <p class="text-muted mb-0">Production operators, skilled sewists, machine operators, warehouse and forklift operators, and other contractual personnel for client sites.</p>
+            </div>
+          </article>
+          <article class="card feature-media-card reveal reveal-delay-1">
+            <img src="assets/img/jobs/interview.jpg" alt="Recruitment screening" />
+            <div class="pad">
+              <h3>Recruitment &amp; Screening</h3>
+              <p class="text-muted mb-0">Document verification, qualification review, and scheduled office interviews to reduce paperwork for applicants and management.</p>
+            </div>
+          </article>
+          <article class="card feature-media-card reveal reveal-delay-2">
+            <img src="assets/img/jobs/docs.jpg" alt="HR consultancy" />
+            <div class="pad">
+              <h3>HR Consultancy Support</h3>
+              <p class="text-muted mb-0">Guidance aligned with our core values — loyalty, dependability, commitment, integrity, and public service.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Areas of specialization</h2>
+        </div>
+        <div class="job-grid">
+          <article class="card service-tile reveal">
+            <img src="assets/img/hero/office.jpg" alt="" />
+            <div class="tile-copy">
+              <h3>Administrative Management</h3>
+              <p>Office and site administrative support for day-to-day operations.</p>
+            </div>
+          </article>
+          <article class="card service-tile reveal">
+            <img src="assets/img/jobs/docs.jpg" alt="" />
+            <div class="tile-copy">
+              <h3>Quality Assurance / ISO 9001</h3>
+              <p>Implementation support for Quality Management Systems.</p>
+            </div>
+          </article>
+          <article class="card service-tile reveal">
+            <img src="assets/img/jobs/safety.jpg" alt="" />
+            <div class="tile-copy">
+              <h3>Health &amp; Safety Management</h3>
+              <p>Personnel oriented toward safe work practices on industrial sites.</p>
+            </div>
+          </article>
+          <article class="card service-tile reveal">
+            <img src="assets/img/jobs/electrical.jpg" alt="" />
+            <div class="tile-copy">
+              <h3>Electrical Works</h3>
+              <p>Support for industrial and process plant electrical requirements.</p>
+            </div>
+          </article>
+          <article class="card service-tile reveal">
+            <img src="assets/img/jobs/machine.jpg" alt="" />
+            <div class="tile-copy">
+              <h3>Instrumentation</h3>
+              <p>Skilled manpower for instrumentation-related projects.</p>
+            </div>
+          </article>
+          <article class="card service-tile reveal">
+            <img src="assets/img/hero/factory.jpg" alt="" />
+            <div class="tile-copy">
+              <h3>Piping &amp; Mechanical</h3>
+              <p>Experience across industrial, oil &amp; gas, and process industries.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band has-photo" style="--cta-photo: url('/assets/img/jobs/warehouse.jpg')">
+      <div class="container reveal">
+        <h2>Looking for work?</h2>
+        <p>Browse current openings and submit your application online.</p>
+        <a class="btn btn-primary btn-lg" href="jobs.html">View jobs</a>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer" id="site-footer"></footer>
+  <script type="module">
+    import { renderHeader, renderFooter } from "./assets/js/ui.js";
+    await renderHeader("services");
+    renderFooter();
+  </script>
+</body>
+</html>
